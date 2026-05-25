@@ -1,0 +1,145 @@
+/* Estilos organizados para la interfaz de gestor de tareas */
+:root {
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --accent: #4f46e5;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 720px;
+    margin: 32px auto;
+    padding: 20px;
+}
+
+.hero {
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+}
+
+.hero p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.task-form-section,
+.task-list-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.task-form-section h2,
+.task-list-section h2 {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+}
+
+#task-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+#task-form input,
+#task-form select {
+    flex: 1 1 180px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+#task-form button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#task-form button:hover {
+    opacity: 0.95;
+}
+
+#tasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#tasks-list li {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+}
+
+#tasks-list li div {
+    min-width: 0;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.actions button {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+.actions button.delete {
+    border-color: #fca5a5;
+    background: #fff0f0;
+}
+
+.actions button.edit {
+    border-color: #bfdbfe;
+    background: #eff6ff;
+}
+
+footer {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+footer code {
+    background: #f3f4f6;
+    padding: 2px 4px;
+    border-radius: 4px;
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestor de Tareas - CRUD</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <header class="hero">
+            <h1>Gestor de Tareas (CRUD)</h1>
+            <p>Interfaz sencilla para crear, leer, actualizar y eliminar tareas usando una API RESTful local.</p>
+        </header>
+
+        <section class="task-form-section">
+            <h2>Crear tarea</h2>
+            <form id="task-form" autocomplete="off">
+                <select id="user" name="userId" required>
+                    <option value="">Selecciona un usuario</option>
+                </select>
+                <input id="title" name="title" type="text" placeholder="Título de la tarea" autocomplete="off" required />
+                <input id="description" name="description" type="text" placeholder="Descripción de la tarea" autocomplete="off" required />
+                <select id="status" name="status" required>
+                    <option value="pendiente">pendiente</option>
+                    <option value="en progreso">en progreso</option>
+                    <option value="completado">completado</option>
+                </select>
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section class="task-list-section">
+            <h2>Tareas</h2>
+            <ul id="tasks-list"></ul>
+        </section>
+
+        <footer>
+            <p>API local esperada: <code>http://localhost:3000/tasks</code></p>
+            <p>Usar <code>json-server</code> con <code>bakent/db.json</code>.</p>
+        </footer>
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
